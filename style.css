@@ -1,0 +1,193 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+/* Reapply the pointer cursor for anchor tags */
+a {
+  cursor: revert;
+}
+/* Remove list styles (bullets/numbers) */
+ol, ul, menu {
+  list-style: none;
+}
+/* For images to not be able to exceed their container */
+img {
+  max-width: 100%;
+}
+
+/* ---------GENERAL STYLING--------- */
+:root {
+  --color-pb: hsl(225, 100%, 94%);
+  --color-bb: hsl(245, 75%, 52%);
+  --color-vpb: hsl(225, 100%, 98%);
+  --color-desb: hsl(224, 23%, 55%);
+  --color-db-: hsl(223, 47%, 23%);
+}
+
+html {
+    font-size: 62.5%;
+  }
+  
+  body {
+    font-family: "Red Hat Display", sans-serif;
+    background: url("images/pattern-background-desktop.svg") no-repeat top center;
+    background-color: var(--color-pb);
+    min-height: 100vh;
+    background-size: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 25px;
+    font-size: 1.6rem;
+    overflow: hidden;
+  }
+  
+  img {
+    display: block;
+    border-radius: 1.5rem 1.5rem 0 0;
+  }
+  
+  .container {
+    width: 40rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .content {
+    background-color: white;
+    padding: 3rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border-radius: 0 0 1.5rem 1.5rem;
+  }
+  
+  .description {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 0 2.3rem;
+    color: var(--color-desb);
+    font-size: 1.5rem;
+  }
+  
+  .description h1, .description p {
+    margin: 0.7rem 0;
+    line-height: 1.6;
+  }
+  
+  .description h1 {
+    font-weight: 900;
+    font-size: 2.5rem;
+    color: var(--color-db-);
+  }
+  
+  .pricing {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: var(--color-vpb);
+    padding: 2rem;
+    border-radius: 1rem;
+    margin: 1.6rem;
+    font-size: 1.4rem;
+    width: 100%;
+  }
+  
+  .pricing-plan {
+    color: var(--color-desb);
+    font-size: 1.5rem;
+    display: flex; 
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    gap: 0.5rem;
+  }
+  
+  .annual {
+    color: var(--color-db-);
+    font-weight: 900;
+  }
+  
+  .change {
+    margin-left: 7rem;
+    font-weight: 700;
+  }
+  
+  .change a {
+    color: var(--color-db-)
+  }
+  
+  .btn {
+    margin: 1.6rem 0;
+    width: 100%;
+    padding: 1.5rem;
+    border: 0;
+    font-size: 1.4rem;
+    font-weight: 700;
+    border-radius: 0.7rem;
+    color: var(--color-vpb);
+    background-color: var(--color-bb);
+    box-shadow: 0 11px 25px #c4b5fd;
+  }
+  
+  .cancel {
+    color: var(--color-desb);
+    font-size: 1.4rem;
+    font-weight: 700;
+    margin: 1.5rem 0;
+  }
+  
+  /* HOVER */
+  .cancel:hover {
+    cursor: pointer;
+    color: var(--color-db-);
+  }
+  
+  .btn:hover {
+    background-color: #7581f2;
+    cursor: pointer;
+  }
+  
+  .change:hover {
+    color: #7581f2;
+    cursor: pointer;
+  }
+  .change a:visited {
+    color: var(--color-bb);
+  }
+  
+  @media screen and  (max-width: 375px) {
+    html {
+      font-size: 54%;
+    }
+    .pricing {
+      padding: 1.5rem;
+      border-radius: 1.4rem;
+    }
+    .description {
+      padding: 0 1rem;
+    }
+    .description p {
+      line-height: 1.6;
+      font-size: 1.7rem;
+    }
+    .cancel {
+      font-size: 1.6rem;
+    }
+    .btn {
+      padding: 2rem;
+      border-radius: 1.2rem;
+    }
+    .change {
+      margin-left: 4rem;
+    }
+  }
