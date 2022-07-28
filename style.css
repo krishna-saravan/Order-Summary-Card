@@ -166,12 +166,16 @@ html {
   }
   
   @media screen and  (max-width: 375px) {
+
+    body {background: url(images/pattern-background-mobile.svg) no-repeat top center;
+      background-color: var(--color-pb);}
+
     html {
       font-size: 54%;
     }
-    .pricing {
-      padding: 1.5rem;
-      border-radius: 1.4rem;
+    .pricing { 
+      display: flex; flex-direction: column; 
+      text-align: center; 
     }
     .description {
       padding: 0 1rem;
@@ -188,6 +192,6 @@ html {
       border-radius: 1.2rem;
     }
     .change {
-      margin-left: 4rem;
+      margin-left: 0;
     }
   }
